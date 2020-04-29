@@ -12,6 +12,15 @@ const should = require('chai').should(),
 describe('AbstractAppender', function() {
     'use strict';
 
+
+    const createBareLogger = function(options) {
+        var opts = Object.assign({}, options);
+
+        opts.level = 'info';
+
+        return new Logger( opts );
+    };
+
     const createLogger = function(options) {
         var opts = Object.assign({}, options);
 
@@ -54,18 +63,64 @@ describe('AbstractAppender', function() {
                 appender[ method ].should.be.a( 'function' );
             });
         });
+
+        it('require typename', function(){
+            var appender = null,
+                opts = {};
+            opts.typeName = null;
+            try {
+                appender = new AbstractAppender( opts);
+            } catch(e) {
+                should.exist( e );
+            }
+            should.equal(appender,null);
+
+        });
     });
 
     describe('formatEntry', function() {
         const  appender = new AbstractAppender( createOptions() );
+        const barelogger = createBareLogger();
         const logger = createLogger();
+
+        it('should create and format fields for a bare logger', function() {
+            const entry = barelogger.createEntry( 'info', [ 'this is a test, time: ', new Date() ] );
+            const fields = appender.formatEntry( entry );
+
+            should.exist( fields );
+            fields.length.should.equal( 4 );
+        });
 
         it('should create and format fields for a specified log entry', function() {
             const entry = logger.createEntry( 'info', [ 'this is a test, time: ', new Date() ] );
             const fields = appender.formatEntry( entry );
 
             should.exist( fields );
-            fields.length.should.equal( 5 );
+            fields.length.should.equal( 6 );
+        });
+
+        it('should create and format fields for a specified log entry with extra null', function() {
+            const entry = logger.createEntry( 'info', [ 'this is a test, time: ', new Date() ], null );
+            const fields = appender.formatEntry( entry );
+
+            should.exist( fields );
+            fields.length.should.equal( 6 );
+        });
+
+        it('should create and format fields for a specified log entry with extra object', function() {
+            const entry = logger.createEntry( 'info', [ 'this is a test, time: ', new Date() ], {"remark":"good","picture":"none"} );
+            const fields = appender.formatEntry( entry );
+
+            should.exist( fields );
+            fields.length.should.equal( 8 );
+        });
+
+        it('should create and format fields for a specified log entry with extra array', function() {
+            const entry = logger.createEntry( 'info', [ 'this is a test, time: ', new Date() ], ["good","none"] );
+            const fields = appender.formatEntry( entry );
+
+            should.exist( fields );
+            fields.length.should.equal( 8 );
         });
     });
 
@@ -96,10 +151,43 @@ describe('AbstractAppender', function() {
             fmt.should.contain('this is my error');
             fmt.should.contain('at ');
         });
+
+        it('no value', function() {
+            
+            const fmt = appender.formatObject(null);
+            fmt.should.be.a('string');
+            fmt.should.equal('');
+        });
+
+        it('object value', function() {
+            
+            const fmt = appender.formatObject('[object Object]');
+            fmt.should.be.a('string');
+            fmt.should.equal("'[object Object]'");
+        });        
+
     });
 
     describe('formatMessage', function() {
         const appender = new AbstractAppender( createOptions() );
+
+        it('no messages', function() {
+            const formatted = appender.formatMessage( null );
+
+            // console.log( formatted );
+            formatted.should.equal ( '' );
+            
+        });
+
+        it('list of messages is not an array', function() {
+            const list = {"message":'this is a test, time: '};
+
+            const formatted = appender.formatMessage( list );
+
+            // console.log( formatted );
+            formatted.should.equal ( list );
+            
+        });
 
         it('should format a list of log messages', function() {
             const list = [ 'this is a test, time: ', new Date(), ' ', { name:'flarb', date:new Date() }, ' ', appender ];
@@ -138,6 +226,27 @@ describe('AbstractAppender', function() {
             const sdt = appender.formatTimestamp( ts );
 
             sdt.should.equal( ts.toString() );
+        });
+    });
+
+
+    describe ("prettyprint", function() {
+        var opt = createOptions();
+
+        it('object value without pretty print', function() {
+            opt.prettyPrint = false;
+            const appender = new AbstractAppender( opt );
+            const fmt = appender.formatObject({"name":"John"});
+            fmt.should.be.a('string');
+            fmt.should.equal('{"name": "John"}');
+        });
+
+        it('object value with pretty print', function() {
+            opt.prettyPrint = true;
+            const appender = new AbstractAppender( opt );
+            const fmt = appender.formatObject({"name":"John"});
+            fmt.should.be.a('string');
+            fmt.should.equal('{\n  "name": "John"\n}');
         });
     });
 });

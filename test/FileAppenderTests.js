@@ -99,4 +99,11 @@ describe('FileAppender', function() {
             });
         });
     });
+
+    describe('setLevel', function() {
+        const opts = createOptions();
+        const logger = createLogger();
+        
+    });
+
 });

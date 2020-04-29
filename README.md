@@ -20,6 +20,7 @@ A simple multi-level logger for console, file, and rolling file appenders.  Feat
 - overridable format methods in base appender
 - stats that track counts of all log statements including warn, error, etc
 - ability to configure to emit process error event for central trapping
+- support groups (like console.group)
 
 ## Installation
 

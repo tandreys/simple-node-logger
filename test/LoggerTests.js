@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /**
  * @class LoggerTests
  *
@@ -38,7 +39,10 @@ describe('Logger', function() {
                 'getCategory',
                 'getDomain',
                 'getStats',
-                '__protected'
+                '__protected',
+                'openGroup',
+                'closeGroup',
+                'closeAllGroups'
             ];
 
         it('should create an instance of Logger', function() {
@@ -84,9 +88,11 @@ describe('Logger', function() {
             logger.warn( randomData.words( 3 ));
             logger.error( randomData.words( 3 ));
             logger.fatal( randomData.words( 3 ));
+            logger.openGroup( randomData.words( 3 ));
+            logger.closeGroup( );
 
             process.nextTick(function() {
-                appender.entries.length.should.equal( 6 );
+                appender.entries.length.should.equal( 7 );
 
                 done();
             });
@@ -116,7 +122,7 @@ describe('Logger', function() {
                 entry.level.should.equal('info');
                 entry.msg.length.should.equal( 1 );
                 entry.msg[0].should.equal( text );
-
+                entry.group.should.equal( 0 );
                 done();
             });
         });

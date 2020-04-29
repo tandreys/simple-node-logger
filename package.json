@@ -5,10 +5,12 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/darrylwest/simple-node-logger.git"
+    "url": "git://github.com/tandreys/simple-node-logger.git"
   },
   "scripts": {
-    "test": "make test"
+    "test": "npm run test-mocha",
+    "test-mocha": "mocha -R spec test/*.js",
+    "eslint": "eslint index.js lib/*.js test/*.js test/mocks/*.js"
   },
   "keywords": [
     "log",
@@ -26,6 +28,7 @@
     "chai": "^4.1.2",
     "eslint": "^6.0.1",
     "mocha": "^5.2.0",
+    "nyc": "^15.0.1",
     "random-fixture-data": "^2.0.17"
   },
   "files": [
@@ -33,7 +36,11 @@
     "lib/",
     "test/mocks"
   ],
+  "nyc":{
+    "include":"lib/*.js",
+    "exclude":"examples/*.js"
+  },
   "author": "darryl.west@raincitysoftware.com",
   "license": "Apache-2.0",
-  "homepage": "https://github.com/darrylwest/simple-node-logger"
+  "homepage": "https://github.com/tandreys/simple-node-logger"
 }

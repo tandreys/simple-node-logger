@@ -1,0 +1,151 @@
+{"time":"08:50:44.577","Level":"INFO","Message":">>> NEW TEST: Graphical view: calculated colums using different Datatypes <<< ","group":0}
+{"time":"08:50:49.486","Level":"INFO","Message":"login('sap.dwc-test+e2eadmin01@sap.com', 'xxxxx', undefined) ","group":0}
+{"time":"08:51:20.010","Level":"INFO","Message":"checkText('#cdwrootapp--shellBreadcrumbs', 'Home', undefined) ","group":0}
+{"time":"08:51:24.043","Level":"INFO","Message":"checkText: got expected text ","group":0}
+{"time":"08:51:27.321","Level":"INFO","Message":"Server version: 2020.10.54 ","group":0}
+{"time":"08:51:27.323","Level":"INFO","Message":"loadScenario('scenario/gv_calc_cols.json') ","group":0}
+{"time":"08:51:27.323","Level":"INFO","Message":"loadScenario 1st path='C:\dwcauto_runner\dwcauto\orcarel\tests\suite\graphical_view\scenario\gv_calc_cols.json' ","group":0}
+{"time":"08:51:27.326","Level":"INFO","Message":"Navigate to Data Builder ","group":0}
+{"time":"08:51:30.294","Level":"INFO","Message":"checkText('#cdwrootapp--shellBreadcrumbs', 'Data Builder', undefined) ","group":0}
+{"time":"08:51:32.965","Level":"INFO","Message":"checkText: got expected text ","group":0}
+{"time":"08:51:32.966","Level":"INFO","Message":"selectSpace(E2E_Auto_09) ","group":0}
+{"time":"08:51:38.196","Level":"INFO","Message":"deleteRepositoryObject(gv_calc_cols, Technical Name, [object Object]) ","group":0}
+{"time":"08:51:50.570","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, gv_calc_cols, Technical Name) ","group":0}
+{"time":"08:51:59.764","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, gv_calc_cols, Technical Name) ","group":0}
+{"time":"08:52:03.126","Level":"INFO","Message":"deleteRepositoryObject(Sample_TYPES, Technical Name, [object Object]) ","group":0}
+{"time":"08:52:15.363","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, Sample_TYPES, Technical Name) ","group":0}
+{"time":"08:52:24.555","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, Sample_TYPES, Technical Name) ","group":0}
+{"time":"08:52:28.330","Level":"INFO","Message":"newModel(GraphicalView) ","group":0}
+{"time":"08:52:29.247","Level":"INFO","Message":"drag_to_diagram ('remote', 'Connections/HANA_ABT/SYSTEM/Tables/VCTYPES', 300, 300, '[object Object]') ","group":0}
+{"time":"08:52:48.858","Level":"INFO","Message":"checkToasterMessage(deployed successfully) ","group":0}
+{"time":"08:52:48.910","Level":"INFO","Message":"end checkToasterMessage(deployed successfully) ","group":0}
+{"time":"08:52:48.952","Level":"INFO","Message":"createCtxObj ('Calculated', 'Entity/Sample_TYPES', 'querybuilder') ","group":0}
+{"time":"08:52:58.219","Level":"INFO","Message":"Save model ('gv_calc_cols') ","group":0}
+{"time":"08:52:58.220","Level":"INFO","Message":"clickToolbarButton (save) ","group":0}
+{"time":"08:53:02.398","Level":"INFO","Message":"checkToasterMessage(Model saved successfully) ","group":0}
+{"time":"08:53:05.922","Level":"INFO","Message":"end checkToasterMessage(Model saved successfully) ","group":0}
+{"time":"08:53:07.933","Level":"INFO","Message":"deploy () ","group":0}
+{"time":"08:53:07.934","Level":"INFO","Message":"clickToolbarButton (deploy) ","group":0}
+{"time":"08:53:12.131","Level":"INFO","Message":"before check busy ","group":0}
+{"time":"08:53:17.491","Level":"INFO","Message":"after check busy ","group":0}
+{"time":"08:53:17.491","Level":"INFO","Message":"checkToasterMessage(valid) ","group":0}
+{"time":"08:53:18.052","Level":"WARN","Message":"Fail to get validation message-1 ","group":0}
+{"time":"08:53:18.052","Level":"INFO","Message":"end checkToasterMessage(valid) ","group":0}
+{"time":"08:53:18.052","Level":"INFO","Message":"checkToasterMessage(success) ","group":0}
+{"time":"08:53:18.091","Level":"INFO","Message":"end checkToasterMessage(success) ","group":0}
+{"time":"08:53:18.092","Level":"INFO","Message":">>> END TEST: Graphical view: calculated colums using different Datatypes <<< ","group":0}
+{"time":"08:53:18.313","Level":"INFO","Message":">>> NEW TEST: Graphical view: Basic joins operations <<< ","group":0}
+{"time":"08:53:20.477","Level":"INFO","Message":"login('sap.dwc-test+e2eadmin01@sap.com', 'xxxxx', undefined) ","group":0}
+{"time":"08:53:27.598","Level":"INFO","Message":"checkText('#cdwrootapp--shellBreadcrumbs', 'Home', undefined) ","group":0}
+{"time":"08:53:29.303","Level":"INFO","Message":"checkText: got expected text ","group":0}
+{"time":"08:53:29.304","Level":"INFO","Message":"loadScenario('scenario/gv_joins_basic.json') ","group":0}
+{"time":"08:53:29.304","Level":"INFO","Message":"loadScenario 1st path='C:\dwcauto_runner\dwcauto\orcarel\tests\suite\graphical_view\scenario\gv_joins_basic.json' ","group":0}
+{"time":"08:53:29.305","Level":"INFO","Message":"Navigate to Data Builder ","group":0}
+{"time":"08:53:32.892","Level":"INFO","Message":"checkText('#cdwrootapp--shellBreadcrumbs', 'Data Builder', undefined) ","group":0}
+{"time":"08:53:33.106","Level":"INFO","Message":"checkText: got expected text ","group":0}
+{"time":"08:53:33.107","Level":"INFO","Message":"selectSpace(E2E_Auto_09) ","group":0}
+{"time":"08:53:36.885","Level":"INFO","Message":"deleteRepositoryObject(gv_joins_basic, Technical Name, [object Object]) ","group":0}
+{"time":"08:53:49.024","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, gv_joins_basic, Technical Name) ","group":0}
+{"time":"08:53:51.732","Level":"INFO","Message":"No row with gv_joins_basic found but options.nofail is true ","group":0}
+{"time":"08:53:51.732","Level":"INFO","Message":"deleteRepositoryObject(300_athlete_events_gv01, Technical Name, [object Object]) ","group":0}
+{"time":"08:54:03.926","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, 300_athlete_events_gv01, Technical Name) ","group":0}
+{"time":"08:54:09.608","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, 300_athlete_events_gv01, Technical Name) ","group":0}
+{"time":"08:54:12.445","Level":"INFO","Message":"deleteRepositoryObject(noc_regions_gv01, Technical Name, [object Object]) ","group":0}
+{"time":"08:54:24.652","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, noc_regions_gv01, Technical Name) ","group":0}
+{"time":"08:54:27.480","Level":"INFO","Message":"No row with noc_regions_gv01 found but options.nofail is true ","group":0}
+{"time":"08:54:27.481","Level":"INFO","Message":"importCSV_Wg(input/olympics/300_athlete_events.csv,300_athlete_events_gv01,undefined) ","group":0}
+{"time":"09:00:15.197","Level":"INFO","Message":">>> END TEST: Graphical view: Basic joins operations <<< ","group":0}
+{"time":"09:00:15.484","Level":"INFO","Message":">>> NEW TEST: Graphical view: Basic joins operations 2 <<< ","group":0}
+{"time":"09:00:17.609","Level":"INFO","Message":"login('sap.dwc-test+e2eadmin01@sap.com', 'xxxxx', undefined) ","group":0}
+{"time":"09:00:46.078","Level":"INFO","Message":"checkText('#cdwrootapp--shellBreadcrumbs', 'Home', undefined) ","group":0}
+{"time":"09:00:49.525","Level":"INFO","Message":"checkText: got expected text ","group":0}
+{"time":"09:00:49.526","Level":"INFO","Message":"loadScenario('scenario/gv_joins_basic2.json') ","group":0}
+{"time":"09:00:49.526","Level":"INFO","Message":"loadScenario 1st path='C:\dwcauto_runner\dwcauto\orcarel\tests\suite\graphical_view\scenario\gv_joins_basic2.json' ","group":0}
+{"time":"09:00:49.527","Level":"INFO","Message":"Navigate to Data Builder ","group":0}
+{"time":"09:00:52.677","Level":"INFO","Message":"checkText('#cdwrootapp--shellBreadcrumbs', 'Data Builder', undefined) ","group":0}
+{"time":"09:00:52.984","Level":"INFO","Message":"checkText: got expected text ","group":0}
+{"time":"09:00:52.984","Level":"INFO","Message":"selectSpace(E2E_Auto_09) ","group":0}
+{"time":"09:00:56.533","Level":"INFO","Message":"deleteRepositoryObject(gv_joins_basic2, Technical Name, [object Object]) ","group":0}
+{"time":"09:01:08.673","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, gv_joins_basic2, Technical Name) ","group":0}
+{"time":"09:01:15.206","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, gv_joins_basic2, Technical Name) ","group":0}
+{"time":"09:01:17.798","Level":"INFO","Message":"deleteRepositoryObject(300_athlete_events_gv02, Technical Name, [object Object]) ","group":0}
+{"time":"09:01:29.896","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, 300_athlete_events_gv02, Technical Name) ","group":0}
+{"time":"09:01:36.483","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, 300_athlete_events_gv02, Technical Name) ","group":0}
+{"time":"09:01:39.085","Level":"INFO","Message":"deleteRepositoryObject(noc_regions_gv02, Technical Name, [object Object]) ","group":0}
+{"time":"09:01:51.188","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, noc_regions_gv02, Technical Name) ","group":0}
+{"time":"09:01:58.612","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, noc_regions_gv02, Technical Name) ","group":0}
+{"time":"09:02:01.258","Level":"INFO","Message":"importCSV_Wg(input/olympics/300_athlete_events.csv,300_athlete_events_gv02,[object Object]) ","group":0}
+{"time":"09:08:15.069","Level":"INFO","Message":">>> END TEST: Graphical view: Basic joins operations 2 <<< ","group":0}
+{"time":"09:08:15.337","Level":"INFO","Message":">>> NEW TEST: Graphical view: Undo/Redo operations <<< ","group":0}
+{"time":"09:08:17.309","Level":"INFO","Message":"login('sap.dwc-test+e2eadmin01@sap.com', 'xxxxx', undefined) ","group":0}
+{"time":"09:08:23.818","Level":"INFO","Message":"checkText('#cdwrootapp--shellBreadcrumbs', 'Home', undefined) ","group":0}
+{"time":"09:08:28.443","Level":"INFO","Message":"checkText: got expected text ","group":0}
+{"time":"09:08:28.443","Level":"INFO","Message":"loadScenario('scenario/gv_joins_undo.json') ","group":0}
+{"time":"09:08:28.444","Level":"INFO","Message":"loadScenario 1st path='C:\dwcauto_runner\dwcauto\orcarel\tests\suite\graphical_view\scenario\gv_joins_undo.json' ","group":0}
+{"time":"09:08:28.446","Level":"INFO","Message":"Navigate to Data Builder ","group":0}
+{"time":"09:08:31.123","Level":"INFO","Message":"checkText('#cdwrootapp--shellBreadcrumbs', 'Data Builder', undefined) ","group":0}
+{"time":"09:08:31.344","Level":"INFO","Message":"checkText: got expected text ","group":0}
+{"time":"09:08:31.345","Level":"INFO","Message":"selectSpace(E2E_Auto_09) ","group":0}
+{"time":"09:08:35.394","Level":"INFO","Message":"deleteRepositoryObject(gv_joins_undo, Technical Name, [object Object]) ","group":0}
+{"time":"09:08:47.513","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, gv_joins_undo, Technical Name) ","group":0}
+{"time":"09:08:54.099","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, gv_joins_undo, Technical Name) ","group":0}
+{"time":"09:08:56.730","Level":"INFO","Message":"deleteRepositoryObject(300_athlete_events_gv03, Technical Name, [object Object]) ","group":0}
+{"time":"09:09:08.842","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, 300_athlete_events_gv03, Technical Name) ","group":0}
+{"time":"09:09:15.193","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, 300_athlete_events_gv03, Technical Name) ","group":0}
+{"time":"09:09:17.777","Level":"INFO","Message":"deleteRepositoryObject(noc_regions_gv03, Technical Name, [object Object]) ","group":0}
+{"time":"09:09:29.900","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, noc_regions_gv03, Technical Name) ","group":0}
+{"time":"09:09:37.588","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, noc_regions_gv03, Technical Name) ","group":0}
+{"time":"09:09:40.222","Level":"INFO","Message":"importCSV_Wg(input/olympics/300_athlete_events.csv,300_athlete_events_gv03,[object Object]) ","group":0}
+{"time":"09:15:54.023","Level":"INFO","Message":">>> END TEST: Graphical view: Undo/Redo operations <<< ","group":0}
+{"time":"09:15:54.305","Level":"INFO","Message":">>> NEW TEST: Graphical view:Suggest Join <<< ","group":0}
+{"time":"09:15:56.405","Level":"INFO","Message":"login('sap.dwc-test+e2eadmin01@sap.com', 'xxxxx', undefined) ","group":0}
+{"time":"09:16:01.935","Level":"INFO","Message":"checkText('#cdwrootapp--shellBreadcrumbs', 'Home', undefined) ","group":0}
+{"time":"09:16:05.349","Level":"INFO","Message":"checkText: got expected text ","group":0}
+{"time":"09:16:05.350","Level":"INFO","Message":"loadScenario('scenario/gv_suggest_join.json') ","group":0}
+{"time":"09:16:05.350","Level":"INFO","Message":"loadScenario 1st path='C:\dwcauto_runner\dwcauto\orcarel\tests\suite\graphical_view\scenario\gv_suggest_join.json' ","group":0}
+{"time":"09:16:05.352","Level":"INFO","Message":"Navigate to Data Builder ","group":0}
+{"time":"09:16:08.836","Level":"INFO","Message":"checkText('#cdwrootapp--shellBreadcrumbs', 'Data Builder', undefined) ","group":0}
+{"time":"09:16:09.064","Level":"INFO","Message":"checkText: got expected text ","group":0}
+{"time":"09:16:09.064","Level":"INFO","Message":"selectSpace(E2E_Auto_09) ","group":0}
+{"time":"09:16:12.238","Level":"INFO","Message":"deleteRepositoryObject(View_SuggestJoin, Technical Name, [object Object]) ","group":0}
+{"time":"09:16:24.360","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, View_SuggestJoin, Technical Name) ","group":0}
+{"time":"09:16:32.330","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, View_SuggestJoin, Technical Name) ","group":0}
+{"time":"09:16:34.927","Level":"INFO","Message":"deleteRepositoryObject(ER_AddAssoicated, Technical Name, [object Object]) ","group":0}
+{"time":"09:16:47.030","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, ER_AddAssoicated, Technical Name) ","group":0}
+{"time":"09:16:49.649","Level":"INFO","Message":"No row with ER_AddAssoicated found but options.nofail is true ","group":0}
+{"time":"09:16:49.649","Level":"INFO","Message":"deleteRepositoryObject(ER_SuggestJoin_Prepare, Technical Name, [object Object]) ","group":0}
+{"time":"09:17:01.750","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, ER_SuggestJoin_Prepare, Technical Name) ","group":0}
+{"time":"09:17:07.499","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, ER_SuggestJoin_Prepare, Technical Name) ","group":0}
+{"time":"09:17:10.125","Level":"INFO","Message":"deleteRepositoryObject(SugJoin_SBook, Technical Name, [object Object]) ","group":0}
+{"time":"09:17:22.233","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, SugJoin_SBook, Technical Name) ","group":0}
+{"time":"09:17:29.426","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, SugJoin_SBook, Technical Name) ","group":0}
+{"time":"09:17:32.003","Level":"INFO","Message":"deleteRepositoryObject(SugJoin_SFlight, Technical Name, [object Object]) ","group":0}
+{"time":"09:17:44.122","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, SugJoin_SFlight, Technical Name) ","group":0}
+{"time":"09:17:51.406","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, SugJoin_SFlight, Technical Name) ","group":0}
+{"time":"09:17:53.988","Level":"INFO","Message":"deleteRepositoryObject(SugJoin_SCounter, Technical Name, [object Object]) ","group":0}
+{"time":"09:18:06.123","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, SugJoin_SCounter, Technical Name) ","group":0}
+{"time":"09:18:13.488","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, SugJoin_SCounter, Technical Name) ","group":0}
+{"time":"09:18:16.090","Level":"INFO","Message":"deleteRepositoryObject(SugJoin_SCustom, Technical Name, [object Object]) ","group":0}
+{"time":"09:18:28.185","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, SugJoin_SCustom, Technical Name) ","group":0}
+{"time":"09:18:35.244","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, SugJoin_SCustom, Technical Name) ","group":0}
+{"time":"09:18:37.864","Level":"INFO","Message":"deleteRepositoryObject(SugJoin_SAirport, Technical Name, [object Object]) ","group":0}
+{"time":"09:18:49.967","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, SugJoin_SAirport, Technical Name) ","group":0}
+{"time":"09:18:57.508","Level":"INFO","Message":"UiTable_getCellId(shellMainContent---databuilderComponent---databuilderLandingPage--entitySelectionLandingPage--spaceEntityTable, SugJoin_SAirport, Technical Name) ","group":0}
+{"time":"09:18:59.979","Level":"INFO","Message":"newModel(ERModel) ","group":0}
+{"time":"09:19:00.847","Level":"INFO","Message":"importCSN(input/csn/ER_SuggestJoin.json, expectWarning:undefined, ignoreWarning:undefined) ","group":0}
+{"time":"09:19:05.123","Level":"INFO","Message":"Save model ('ER_SuggestJoin_Prepare') ","group":0}
+{"time":"09:19:05.123","Level":"INFO","Message":"clickToolbarButton (save) ","group":0}
+{"time":"09:19:16.000","Level":"INFO","Message":"checkToasterMessage(Model saved successfully) ","group":0}
+{"time":"09:19:17.890","Level":"INFO","Message":"end checkToasterMessage(Model saved successfully) ","group":0}
+{"time":"09:19:22.745","Level":"INFO","Message":"newModel(graphicalview) ","group":0}
+{"time":"09:19:23.190","Level":"INFO","Message":"drag_to_diagram ('repository', 'Tables/SugJoin_SBook', 250, 250, 'undefined') ","group":0}
+{"time":"09:19:32.354","Level":"INFO","Message":"graphcial view suggest join ('SugJoin_SCustom', 'Entity/SugJoin_SBook') ","group":0}
+{"time":"09:19:32.354","Level":"INFO","Message":"clickCtxCommand ('JoinSuggestion', 'Entity/SugJoin_SBook', 'querybuilder') ","group":0}
+{"time":"09:19:35.633","Level":"INFO","Message":"graphcial view suggest join ('SugJoin_SFlight', 'Entity/SugJoin_SBook') ","group":0}
+{"time":"09:19:35.633","Level":"INFO","Message":"clickCtxCommand ('JoinSuggestion', 'Entity/SugJoin_SBook', 'querybuilder') ","group":0}
+{"time":"09:19:39.947","Level":"INFO","Message":"Save model ('View_SuggestJoin') ","group":0}
+{"time":"09:19:39.947","Level":"INFO","Message":"clickToolbarButton (save) ","group":0}
+{"time":"09:19:43.859","Level":"INFO","Message":"checkToasterMessage(Model saved successfully) ","group":0}
+{"time":"09:19:47.473","Level":"INFO","Message":"end checkToasterMessage(Model saved successfully) ","group":0}
+{"time":"09:19:49.482","Level":"INFO","Message":">>> END TEST: Graphical view:Suggest Join <<< ","group":0}
+{"Message":"job=1 - exit code=3, signal=nulll","group":0}

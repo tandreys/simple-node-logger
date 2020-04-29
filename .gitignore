@@ -9,3 +9,5 @@ dist
 node_modules
 jsdoc
 query-db
+coverage
+.nyc_output

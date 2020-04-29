@@ -6,6 +6,8 @@
  */
 const should = require('chai').should();
 const dash = require( 'lodash' );
+const path = require( 'path' );
+const os = require( 'os' );
 const fs = require( 'fs' );
 const Logger = require('../lib/Logger' );
 const SimpleLogger = require( '../lib/SimpleLogger' );
@@ -26,6 +28,7 @@ describe('SimpleLogger', function() {
                 'createLogger',
                 'createConsoleAppender',
                 'createFileAppender',
+                'createJSONFileAppender',
                 'createRollingFileAppender',
                 'addAppender',
                 'getAppenders',
@@ -225,7 +228,8 @@ describe('SimpleLogger', function() {
         });
 
         it('should create a simple logger with  console and file appenders when invoked with a filename', function() {
-            const log = SimpleLogger.createSimpleLogger('/tmp/mytmpfile.log');
+            var tmpdir = os.tmpdir();
+            const log = SimpleLogger.createSimpleLogger(path.join(tmpdir,'/mytmpfile.log'));
 
             should.exist( log );
             log.getLevel().should.equal('info');
@@ -234,5 +238,17 @@ describe('SimpleLogger', function() {
             appenders[0].getTypeName().should.equal('ConsoleAppender');
             appenders[1].getTypeName().should.equal('FileAppender');
         });
+
+        it('should create a simple logger with  console and json file appenders when invoked with a filename', function() {
+            var tmpdir = os.tmpdir();
+            const log = SimpleLogger.createSimpleJSONFileLogger(path.join(tmpdir,'/mytmpfile1.log'));
+
+            should.exist( log );
+            log.getLevel().should.equal('info');
+            const appenders = log.getAppenders();
+            appenders.length.should.equal(2);
+            appenders[0].getTypeName().should.equal('ConsoleAppender');
+            appenders[1].getTypeName().should.equal('JSONFileAppender');
+        });        
     });
 });
