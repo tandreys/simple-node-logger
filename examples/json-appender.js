@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 const SimpleLogger = require('../index.js');
-    Logger = require('../lib/Logger'),
-    AbstractAppender = SimpleLogger.AbstractAppender,
-    manager = new SimpleLogger();
+Logger = require('../lib/Logger'),
+AbstractAppender = SimpleLogger.AbstractAppender,
+manager = new SimpleLogger();
 
 const JSONAppender = function(options = {}) {
     const appender = this,
