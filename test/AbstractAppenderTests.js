@@ -238,7 +238,7 @@ describe('AbstractAppender', function() {
             const appender = new AbstractAppender( opt );
             const fmt = appender.formatObject({"name":"John"});
             fmt.should.be.a('string');
-            fmt.should.equal('{"name": "John"}');
+            fmt.should.equal('{"name":"John"}');
         });
 
         it('object value with pretty print', function() {

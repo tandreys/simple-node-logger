@@ -42,7 +42,9 @@ describe('Logger', function() {
                 '__protected',
                 'openGroup',
                 'closeGroup',
-                'closeAllGroups'
+                'closeAllGroups',
+                'beginTest',
+                'endTest'
             ];
 
         it('should create an instance of Logger', function() {
@@ -90,9 +92,11 @@ describe('Logger', function() {
             logger.fatal( randomData.words( 3 ));
             logger.openGroup( randomData.words( 3 ));
             logger.closeGroup( );
+            logger.beginTest( randomData.words( 3 ));
+            logger.endTest(randomData.words( 3 ) );
 
             process.nextTick(function() {
-                appender.entries.length.should.equal( 7 );
+                appender.entries.length.should.equal( 9 );
 
                 done();
             });
@@ -224,6 +228,40 @@ describe('Logger', function() {
             log.getStats().get('warn').should.equal(1);
             log.error('this is one');
             log.getStats().get('error').should.equal(1);
+        });
+    });
+
+    describe("special log test", function(){
+        const opts = createOptions();
+
+        opts.level = Logger.STANDARD_LEVELS[0]; // all
+        opts.domain = 'MyApp';
+        opts.pid = 999;
+
+        it ('beginTest', function(done){
+            const logger = new Logger( opts );
+            const appender = new MockAppender();
+            const text = "my test";
+
+            logger.setAppenders( [ appender ] );
+
+            logger.beginTest( text );
+
+            process.nextTick(function() {
+                appender.entries.length.should.equal( 1 );
+                var entry = appender.entries[0];
+
+                // console.log( entry );
+
+                entry.ts.should.be.above( Date.now() - 1000 );
+                entry.pid.should.equal( opts.pid );
+                entry.domain.should.equal( opts.domain );
+                entry.category.should.equal( opts.category );
+                entry.level.should.equal('begintest');
+                entry.msg.length.should.equal( 7 );
+                entry.group.should.equal( 0 );
+                done();
+            });
         });
     });
 });

@@ -73,7 +73,8 @@ describe('JSONFileAppender', function() {
         const opts = createOptions();
         const logger = createLogger();
 
-        it('should write a formatted entry', function(done) {
+        it('should write a formatted entry', function() {
+            
             opts.writer = {};
             opts.writer.write = function(str) {
                 should.exist( str );
@@ -81,14 +82,14 @@ describe('JSONFileAppender', function() {
                 str.should.contain('"level":"INFO"');
                 str.should.contain('{');
                 str.should.contain('}');
-                str.should.contain('"group":0');
+                return str.should.contain('"group":0');
 
-                done();
+                
             };
 
             const appender = new JSONFileAppender( opts );
             const entry = logger.createEntry( 'info', [ 'this is a test, time: ', new Date() ] );
-            appender.write( entry );
+            return appender.write( entry );
 
         });
 
@@ -107,6 +108,36 @@ describe('JSONFileAppender', function() {
                 done();
             });
         });
+
+        it('should write a beginTest entry', function(done) {
+            
+            opts.writer = {};
+            opts.writer.write = function(str) {
+                should.exist( str );
+
+                str.should.contain('"level":"BEGINTEST"');
+                done();
+            };
+
+            const appender = new JSONFileAppender( opts );
+            logger.setAppenders( [ appender ] );
+            logger.beginTest('this is a test time');   
+        });
+
+        it('should write a endTest entry', function(done) {
+           
+            opts.writer = {};
+            opts.writer.write = function(str) {
+                should.exist( str );
+
+                str.should.contain('"level":"ENDTEST"');
+                done();
+            };
+
+            const appender = new JSONFileAppender( opts );
+            logger.setAppenders( [ appender ] );
+            logger.endTest('this is a test time');   
+        });        
     });
 
     describe('formatEntry', function() {
